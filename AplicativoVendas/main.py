@@ -3,12 +3,17 @@ from kivy.lang import Builder
 from telas import *
 from botoes import *
 import requests
+import os
+import certifi
 from bannervenda import BannerVenda
 import os
 from functools import partial  # serve para passar uma dado no on release
 from myfirebase import MyFirebase
 from bannervendedor import BannerVendedor
 from datetime import date
+
+# necessário quando o aplicativo estiver no celular - obrigatório
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 # https://aplicativovendashash-9b808-default-rtdb.firebaseio.com/
 
